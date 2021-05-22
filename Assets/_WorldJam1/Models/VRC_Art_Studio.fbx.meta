@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 1652e4b5a66568b4497d4f055fce0215
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Studio_arch
+    100002: Studio_canvas
+    100004: Studio_easel
+    100006: Studio_floor
+    100008: Studio_frame
+    100010: Studio_hanger
+    100012: Studio_pedestal1
+    100014: Studio_pedestal2
+    100016: Studio_rug
+    100018: Studio_vase
+    100020: Studio_window
+    100022: //RootNode
+    400000: Studio_arch
+    400002: Studio_canvas
+    400004: Studio_easel
+    400006: Studio_floor
+    400008: Studio_frame
+    400010: Studio_hanger
+    400012: Studio_pedestal1
+    400014: Studio_pedestal2
+    400016: Studio_rug
+    400018: Studio_vase
+    400020: Studio_window
+    400022: //RootNode
+    2100000: floor
+    2100002: pedestal
+    2100004: vase
+    2100006: window
+    2100008: frame
+    2100010: canvas
+    2100012: easel
+    2100014: rug
+    2100016: pedestal3
+    2100018: arch
+    2100020: hanger
+    2300000: Studio_arch
+    2300002: Studio_canvas
+    2300004: Studio_easel
+    2300006: Studio_floor
+    2300008: Studio_frame
+    2300010: Studio_hanger
+    2300012: Studio_pedestal1
+    2300014: Studio_pedestal2
+    2300016: Studio_rug
+    2300018: Studio_vase
+    2300020: Studio_window
+    3300000: Studio_arch
+    3300002: Studio_canvas
+    3300004: Studio_easel
+    3300006: Studio_floor
+    3300008: Studio_frame
+    3300010: Studio_hanger
+    3300012: Studio_pedestal1
+    3300014: Studio_pedestal2
+    3300016: Studio_rug
+    3300018: Studio_vase
+    3300020: Studio_window
+    4300000: Studio_floor
+    4300002: Studio_pedestal1
+    4300004: Studio_vase
+    4300006: Studio_window
+    4300008: Studio_frame
+    4300010: Studio_canvas
+    4300012: Studio_easel
+    4300014: Studio_rug
+    4300016: Studio_pedestal2
+    4300018: Studio_arch
+    4300020: Studio_hanger
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 64
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 98
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
