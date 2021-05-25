@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: Chooser
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 86a357a1d5655a34b9c289484e13a1fc,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 28a06bf822f64fb4082763fb5861e143,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export objects\r\n    .export ActiveSceneLabel\r\n
     \   .sync currentIndex, none\r\n    \r\n    Int32_0: %SystemInt32, null\r\n    Int32_1:

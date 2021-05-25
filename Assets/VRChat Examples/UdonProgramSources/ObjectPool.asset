@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: ObjectPool
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 20553fd2306dd0141a89db1a236132a4,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 39547618dd43641488c2d7e5e61ea361,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export pool\r\n    .export spawnRate\r\n
     \   \r\n    Boolean_0: %SystemBoolean, null\r\n    Boolean_1: %SystemBoolean,
@@ -38,8 +38,8 @@ MonoBehaviour:
     \       EXTERN, \"VRCSDK3ComponentsVRCObjectPool.__TryToSpawn__UnityEngineGameObject\"\r\n
     \       JUMP, 0x000000F4\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n    .export _start\r\n
     \   \r\n    _start:\r\n    \r\n        PUSH, lastSpawnTime\r\n        EXTERN,
-    \"SystemSingle.__get_MinValue__SystemSingle\"\r\n        PUSH, lastSpawnTime\r\n
-    \       PUSH, lastSpawnTime\r\n        COPY\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+    \"SystemSingle.__get_MinValue__SystemSingle\"\r\n        JUMP, 0xFFFFFFFC\r\n
+    \   \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
     name: 
