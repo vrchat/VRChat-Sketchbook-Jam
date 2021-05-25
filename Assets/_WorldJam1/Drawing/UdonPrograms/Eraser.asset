@@ -31,7 +31,9 @@ MonoBehaviour:
     %SystemBoolean, null\r\n    instance_4: %VRCUdonUdonBehaviour, this\r\n    target_0:
     %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n    eventName_0: %SystemString,
     null\r\n    var_1: %SystemObject, null\r\n    object_6: %SystemObject, null\r\n
-    \   result_6: %SystemBoolean, null\r\n    instance_5: %UnityEngineLineRenderer,
+    \   result_6: %SystemBoolean, null\r\n    Boolean_2: %SystemBoolean, null\r\n
+    \   instance_5: %UnityEngineCollider, null\r\n    other_1: %SystemObject, null\r\n
+    \   onTriggerStayOther: %UnityEngineCollider, null\r\n    instance_6: %UnityEngineLineRenderer,
     null\r\n    value_1: %SystemBoolean, null\r\n    Single_0: %SystemSingle, null\r\n
     \   Single_1: %SystemSingle, null\r\n    f_0: %SystemSingle, null\r\n    Single_2:
     %SystemSingle, null\r\n    Single_3: %SystemSingle, null\r\n    target: %UnityEngineLineRenderer,
@@ -83,18 +85,23 @@ MonoBehaviour:
     target_0\r\n        PUSH, eventName_0\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
     \       PUSH, var_1\r\n        PUSH, target\r\n        COPY\r\n        PUSH, var_1\r\n
     \       PUSH, targetBehaviour\r\n        COPY\r\n        JUMP, 0x000003D4\r\n
-    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export _update\r\n    \r\n    _update:\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onTriggerStay\r\n    \r\n    _onTriggerStay:\r\n
     \   \r\n        PUSH, target\r\n        PUSH, object_6\r\n        COPY\r\n        PUSH,
     object_6\r\n        PUSH, result_6\r\n        EXTERN, \"VRCSDKBaseUtilities.__IsValid__SystemObject__SystemBoolean\"\r\n
-    \       PUSH, result_6\r\n        JUMP_IF_FALSE, 0x000004B4\r\n        PUSH, target\r\n
-    \       PUSH, instance_5\r\n        COPY\r\n        PUSH, Single_2\r\n        EXTERN,
-    \"UnityEngineTime.__get_time__SystemSingle\"\r\n        PUSH, Single_2\r\n        PUSH,
-    blinkSpeed\r\n        PUSH, f_0\r\n        EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\r\n
+    \       PUSH, result_6\r\n        JUMP_IF_FALSE, 0x00000514\r\n        PUSH, onTriggerStayOther\r\n
+    \       PUSH, instance_5\r\n        COPY\r\n        PUSH, targetCollider\r\n        PUSH,
+    other_1\r\n        COPY\r\n        PUSH, instance_5\r\n        PUSH, other_1\r\n
+    \       PUSH, Boolean_2\r\n        EXTERN, \"UnityEngineCollider.__Equals__SystemObject__SystemBoolean\"\r\n
+    \       PUSH, Boolean_2\r\n        JUMP_IF_FALSE, 0x0000050C\r\n        PUSH,
+    target\r\n        PUSH, instance_6\r\n        COPY\r\n        PUSH, Single_2\r\n
+    \       EXTERN, \"UnityEngineTime.__get_time__SystemSingle\"\r\n        PUSH,
+    Single_2\r\n        PUSH, blinkSpeed\r\n        PUSH, f_0\r\n        EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\r\n
     \       PUSH, f_0\r\n        PUSH, Single_0\r\n        EXTERN, \"UnityEngineMathf.__Sin__SystemSingle__SystemSingle\"\r\n
     \       PUSH, Single_0\r\n        PUSH, Single_1\r\n        PUSH, value_1\r\n
     \       EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\r\n
-    \       PUSH, instance_5\r\n        PUSH, value_1\r\n        EXTERN, \"UnityEngineLineRenderer.__set_enabled__SystemBoolean__SystemVoid\"\r\n
-    \       JUMP, 0x000004B4\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+    \       PUSH, instance_6\r\n        PUSH, value_1\r\n        EXTERN, \"UnityEngineLineRenderer.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0x0000050C\r\n        JUMP, 0x00000514\r\n        JUMP, 0xFFFFFFFC\r\n
+    \   \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
     name: 
@@ -204,7 +211,8 @@ MonoBehaviour:
       nodeUIDs:
       - 
       - 02e8d602-2950-46c8-8822-a13470f8b67b|0
-      flowUIDs: []
+      flowUIDs:
+      - 
       nodeValues:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|9b3209fa-3a57-4bb3-b6f4-e74b245276b9
@@ -302,16 +310,9 @@ MonoBehaviour:
       nodeValues:
       - unityObjectValue: {fileID: 0}
         stringValue: 
-    - fullName: Event_Update
-      uid: 245e28a0-6434-4a6f-b338-c3e67c4ad189
-      position: {x: 280, y: 1730}
-      nodeUIDs: []
-      flowUIDs:
-      - 83606da2-5116-4377-a464-fc5896cd98a8
-      nodeValues: []
     - fullName: Get_Variable
       uid: ecd01fd5-ca02-4598-aef5-2ff06b76ce51
-      position: {x: 200, y: 1840}
+      position: {x: 780, y: 1780}
       nodeUIDs:
       - ecd01fd5-ca02-4598-aef5-2ff06b76ce51|0
       flowUIDs: []
@@ -322,17 +323,17 @@ MonoBehaviour:
         stringValue: 
     - fullName: Is_Valid
       uid: 83606da2-5116-4377-a464-fc5896cd98a8
-      position: {x: 420, y: 1750}
+      position: {x: 540, y: 1650}
       nodeUIDs:
-      - ecd01fd5-ca02-4598-aef5-2ff06b76ce51|0
+      - 6732d43d-9858-42f3-a62b-e68b29a8e1bf|0
       flowUIDs:
-      - f58028b3-ad52-4e6a-94e0-8c5390ad94bf
+      - 8925bec2-996a-4afe-9dcc-5d5522ffbf2e
       nodeValues:
       - unityObjectValue: {fileID: 0}
         stringValue: 
     - fullName: UnityEngineLineRenderer.__set_enabled__SystemBoolean__SystemVoid
       uid: f58028b3-ad52-4e6a-94e0-8c5390ad94bf
-      position: {x: 1080, y: 1780}
+      position: {x: 980, y: 1650}
       nodeUIDs:
       - ecd01fd5-ca02-4598-aef5-2ff06b76ce51|0
       - d6e9248c-3076-4b11-9871-63f30312d6cb|0
@@ -344,13 +345,13 @@ MonoBehaviour:
         stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
     - fullName: UnityEngineTime.__get_time__SystemSingle
       uid: e1632a15-b2cc-4587-b662-a9621d3badce
-      position: {x: 380, y: 1950}
+      position: {x: 320, y: 1980}
       nodeUIDs: []
       flowUIDs: []
       nodeValues: []
     - fullName: UnityEngineMathf.__Sin__SystemSingle__SystemSingle
       uid: 6df5e8d4-5f67-4f95-94f1-6ef8c0cf111c
-      position: {x: 700, y: 1940}
+      position: {x: 640, y: 1970}
       nodeUIDs:
       - 1a861f61-2dc1-4d36-95cb-2e52bee2bf6a|0
       flowUIDs: []
@@ -359,7 +360,7 @@ MonoBehaviour:
         stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
     - fullName: SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean
       uid: d6e9248c-3076-4b11-9871-63f30312d6cb
-      position: {x: 860, y: 1920}
+      position: {x: 800, y: 1950}
       nodeUIDs:
       - 6df5e8d4-5f67-4f95-94f1-6ef8c0cf111c|0
       - 
@@ -371,7 +372,7 @@ MonoBehaviour:
         stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
     - fullName: SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle
       uid: 1a861f61-2dc1-4d36-95cb-2e52bee2bf6a
-      position: {x: 540, y: 1950}
+      position: {x: 480, y: 1980}
       nodeUIDs:
       - e1632a15-b2cc-4587-b662-a9621d3badce|0
       - b343c982-3a97-4154-93c9-d7bd90547adc|0
@@ -404,7 +405,7 @@ MonoBehaviour:
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Get_Variable
       uid: b343c982-3a97-4154-93c9-d7bd90547adc
-      position: {x: 340, y: 2050}
+      position: {x: 280, y: 2080}
       nodeUIDs:
       - 
       flowUIDs: []
@@ -586,6 +587,57 @@ MonoBehaviour:
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|00e43a32-0d86-44af-88ee-aae47b18087b
       - unityObjectValue: {fileID: 0}
         stringValue: 
+    - fullName: Event_OnTriggerStay
+      uid: 4eeed13c-0bb0-482a-8d55-9f17eb27dba8
+      position: {x: 100, y: 1650}
+      nodeUIDs: []
+      flowUIDs:
+      - 83606da2-5116-4377-a464-fc5896cd98a8
+      nodeValues: []
+    - fullName: UnityEngineCollider.__Equals__SystemObject__SystemBoolean
+      uid: 795a7b68-d632-444a-87a2-8da5332af2c6
+      position: {x: 380, y: 1820}
+      nodeUIDs:
+      - 4eeed13c-0bb0-482a-8d55-9f17eb27dba8|0
+      - 13142046-2ee6-4f88-bee0-d52b6c713284|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: 13142046-2ee6-4f88-bee0-d52b6c713284
+      position: {x: 160, y: 1840}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|d988a67c-3ea4-4916-b7ee-8c4ed2558451
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: 6732d43d-9858-42f3-a62b-e68b29a8e1bf
+      position: {x: 340, y: 1730}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|9b3209fa-3a57-4bb3-b6f4-e74b245276b9
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Branch
+      uid: 8925bec2-996a-4afe-9dcc-5d5522ffbf2e
+      position: {x: 720, y: 1650}
+      nodeUIDs:
+      - 795a7b68-d632-444a-87a2-8da5332af2c6|0
+      flowUIDs:
+      - f58028b3-ad52-4e6a-94e0-8c5390ad94bf
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
     updateOrder: 0
   graphElementData:
   - type: 2
@@ -602,7 +654,7 @@ MonoBehaviour:
       LineRenderer and clear Target","layer":0,"elementTypeColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}'
   - type: 2
     uid: de8e2439-785e-4270-b20f-56d7f20f7ec4
-    jsonData: '{"uid":"de8e2439-785e-4270-b20f-56d7f20f7ec4","layout":{"serializedVersion":"2","x":180.0,"y":1670.0,"width":1077.0,"height":492.0},"containedElements":["1a861f61-2dc1-4d36-95cb-2e52bee2bf6a","d6e9248c-3076-4b11-9871-63f30312d6cb","6df5e8d4-5f67-4f95-94f1-6ef8c0cf111c","e1632a15-b2cc-4587-b662-a9621d3badce","f58028b3-ad52-4e6a-94e0-8c5390ad94bf","83606da2-5116-4377-a464-fc5896cd98a8","ecd01fd5-ca02-4598-aef5-2ff06b76ce51","245e28a0-6434-4a6f-b338-c3e67c4ad189","b343c982-3a97-4154-93c9-d7bd90547adc"],"title":"Make
+    jsonData: '{"uid":"de8e2439-785e-4270-b20f-56d7f20f7ec4","layout":{"serializedVersion":"2","x":80.0,"y":1580.0,"width":1074.0,"height":604.0},"containedElements":["1a861f61-2dc1-4d36-95cb-2e52bee2bf6a","d6e9248c-3076-4b11-9871-63f30312d6cb","6df5e8d4-5f67-4f95-94f1-6ef8c0cf111c","e1632a15-b2cc-4587-b662-a9621d3badce","f58028b3-ad52-4e6a-94e0-8c5390ad94bf","83606da2-5116-4377-a464-fc5896cd98a8","ecd01fd5-ca02-4598-aef5-2ff06b76ce51","245e28a0-6434-4a6f-b338-c3e67c4ad189","b343c982-3a97-4154-93c9-d7bd90547adc","4eeed13c-0bb0-482a-8d55-9f17eb27dba8","795a7b68-d632-444a-87a2-8da5332af2c6","13142046-2ee6-4f88-bee0-d52b6c713284","d5f3c53e-48ce-47ff-b900-69685018ed77","4f5ff33f-21f6-40e1-b46d-78c067e1dcd0","da5b3e6a-4898-4e26-919f-bbbfdd7a7882","814c99fe-9ce8-4b3a-a080-7bdd83868c07","6732d43d-9858-42f3-a62b-e68b29a8e1bf","c36dfec3-2266-4076-add9-86408772b9f7","3817cfa5-6feb-4b36-8df2-1caf0ff8ad78","9a1826c3-984d-41b3-8997-f9b204a38bd5","0a527ed9-ebb2-4712-b3f2-5cc96075d3b2","8925bec2-996a-4afe-9dcc-5d5522ffbf2e"],"title":"Make
       Target Line Blink","layer":0,"elementTypeColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}'
   - type: 5
     uid: b599b382-55b3-49c3-a824-9924bf756def
@@ -611,7 +663,7 @@ MonoBehaviour:
     uid: 44ecb895-be4c-4688-ad0a-172eca4195a2
     jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":10.0,"y":20.0,"width":0.0,"height":0.0}}'
   viewTransform:
-    position: {x: 77.918434, y: 125.43764}
-    scale: 0.65751624
+    position: {x: 31.428978, y: -512.7648}
+    scale: 0.7561437
   version: 1.0.0
   showAssembly: 0
